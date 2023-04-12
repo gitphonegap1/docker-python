@@ -45,6 +45,4 @@ EXPOSE 27017
 
 EXPOSE 6000
 
-CMD ["mongod", "--bind_ip_all" "-c", "python3","app.py","--port=6000", "--host=0.0.0.0"]
-
-# CMD ["python3","app.py","--port=6000", "--host=0.0.0.0"]
+CMD ["mongod", "--bind_ip_all"] & ["python3","app.py","--port=6000", "--host=0.0.0.0"]
